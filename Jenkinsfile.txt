@@ -76,5 +76,14 @@ pipeline {
             }
         }
 		//Code ends for stage Install
+
+//Code starts for stage Launch Tomcat Server
+		stage('Launch Tomcat Server') {
+            steps {
+                sh '/tmp/apache-tomcat-9.0.20/bin/startup.sh'
+            }
+        }
+		//Code ends for stage Launch Tomcat Server
+		
     }
 }
